@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+  }
+  body{
+    background-color: rgb(39, 39, 39);
+  }
+  #cardList {
+    height: 100px;
+    width: 800px;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+   #unbox-area{
+    display: flex;
+    height: 100% !important;
+    justify-content: center;
+   }
+   #unbox-area #cardList{
+    box-shadow: 0 1px 3px gray;
+    border: none !important;
+    border-radius: 5px;
+   }
+  .card {
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .card > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    z-index: 3050 !important;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: relative;
+    left: 23%;
+    border-top: 20px solid #f00;
+  }
+  .open-container{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    padding-left: 80px;
+  }
+  .btn{
+    padding: 10px 25px;
+    background-color: rgb(48, 48, 48);
+    border: none;
+    box-shadow: 0 4px 6px gray;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+  }
+  #dialog-msg > img {
+    width: 150px;
+    height: 150px;
+  }
+  #dialog-msg {
+    text-align: center;
+  }
