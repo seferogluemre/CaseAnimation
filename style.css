@@ -22,9 +22,9 @@ body {
 }
 
 #unbox-area #cardList {
-  box-shadow: 0 1px 3px gray;
+  box-shadow: 0 5px 12px rgb(99, 98, 98);
   border: none !important;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .card {
@@ -70,6 +70,12 @@ body {
   outline: none;
 }
 
+.btn:hover {
+  background-color: rgb(75, 75, 75);
+  cursor: pointer;
+  box-shadow: 0 6px 8px gray;
+}
+
 .ui-dialog {
   background-color: rgb(107, 107, 107) !important;
   color: white !important;
@@ -99,4 +105,29 @@ body {
 
 #dialog-msg {
   text-align: center;
+}
+
+/* Yeni eklemeler */
+
+/* Kart listesinin büyümesi ve dönmesi */
+#cardList.animate {
+  transform: scale(1.5) rotate(720deg);
+  /* Büyüme ve 2 tam tur dönüş */
+  transition: transform 1s ease-in-out;
+  /* 3 saniyelik animasyon */
+}
+
+/* Kartların büyüme sırasında ortalanması */
+#unbox-area #cardList.animate {
+  position: relative;
+  top: 50%;
+  transform: translateY(40%) scale(1.7);
+}
+
+/* Animasyon bittiğinde geri dönüş */
+#cardList {
+  transform: scale(1) rotate(0);
+  /* Orijinal duruma dön */
+  transition: transform 0.5s ease;
+  /* Daha hızlı dönüş */
 }
